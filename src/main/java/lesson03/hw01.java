@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 // (*) При запуске приложения, запросите у пользователя число от 1 до 5, и после ввода
 // выполнения метод, соответствующий указанному номеру со случайным значением аргументов;
-public class hw01 {
+public class Hw01 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите число от 1 до 5");
@@ -58,13 +58,12 @@ public class hw01 {
     // значением. Если data меньше 10 включительно, то в консоль должно быть выведено сообщение “Красный”,
     // если от 10 до 20 включительно, то “Желтый”, если больше 20 - “Зеленый”;
     public static void selectColor() {
-        int data = 30;
+        int data = 20;
         if (data <= 10) {
             System.out.println("Красный");
-        } else if (data > 10 && data <=20) {
+        } else if (data <= 20) {
             System.out.println("Желтый");
-        }
-        else {
+        } else {
             System.out.println("Зеленый");
         }
     }
