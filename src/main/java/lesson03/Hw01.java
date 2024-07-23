@@ -3,8 +3,8 @@ package lesson03;
 import java.util.Scanner;
 import java.util.Random;
 
-/* Задание со (*) При запуске приложения, запросите у пользователя число от 1 до 5, и после ввода выполнения метод,
-соответствующий указанному номеру со случайным значением аргументов*/
+/* ЗАДАНИЕ СО (*) ПРИ ЗАПУСКЕ ПРИЛОЖЕНИЯ, ЗАПРОСИТЕ У ПОЛЬЗОВАТЕЛЯ ЧИСЛО ОТ 1 ДО 5, И ПОСЛЕ ВВОДА ВЫПОЛНЕНИЯ МЕТОД,
+СООТВЕТСТВУЮЩИЙ УКАЗАННОМУ НОМЕРУ СО СЛУЧАЙНЫМ ЗНАЧЕНИЕМ АРГУМЕНТОВ*/
 public class Hw01 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -56,7 +56,7 @@ public class Hw01 {
         }
     }
 
-    /* (1) Реализуйте метод greetings(), который при вызове должен отпечатать в столбец 4 слова: Hello, World, from, Java*/
+    /* (1) РЕАЛИЗУЙТЕ МЕТОД GREETINGS(), КОТОРЫЙ ПРИ ВЫЗОВЕ ДОЛЖЕН ОТПЕЧАТАТЬ В СТОЛБЕЦ 4 СЛОВА: HELLO, WORLD, FROM, JAVA*/
     public static void greetings() {
         System.out.println("Hello");
         System.out.println("World");
@@ -64,9 +64,9 @@ public class Hw01 {
         System.out.println("Java");
     }
 
-    /* (2) Реализуйте метод checkSign(..), принимающий в качестве аргументов 3 int переменные a, b и c. Метод должен
-    посчитать их сумму, и если она больше или равна 0, то вывести в консоль сообщение “Сумма положительная”, в противном
-    случае - “Сумма отрицательная”*/
+    /* (2) РЕАЛИЗУЙТЕ МЕТОД CHECKSIGN(..), ПРИНИМАЮЩИЙ В КАЧЕСТВЕ АРГУМЕНТОВ 3 INT ПЕРЕМЕННЫЕ A, B И C. МЕТОД ДОЛЖЕН
+    ПОСЧИТАТЬ ИХ СУММУ, И ЕСЛИ ОНА БОЛЬШЕ ИЛИ РАВНА 0, ТО ВЫВЕСТИ В КОНСОЛЬ СООБЩЕНИЕ “СУММА ПОЛОЖИТЕЛЬНАЯ”, В
+    ПРОТИВНОМ СЛУЧАЕ - “СУММА ОТРИЦАТЕЛЬНАЯ”*/
     public static void checkSign(int a, int b, int c) {
         if ((a + b + c) >= 0) {
             System.out.println("Сумма положительная");
@@ -75,9 +75,9 @@ public class Hw01 {
         }
     }
 
-    /* (3) Реализуйте метод selectColor() в теле которого задайте int переменную data с любым начальным значением. Если
-    data меньше 10 включительно, то в консоль должно быть выведено сообщение “Красный”, если от 10 до 20 включительно, то
-     “Желтый”, если больше 20 - “Зеленый”;*/
+    /* (3) РЕАЛИЗУЙТЕ МЕТОД SELECTCOLOR() В ТЕЛЕ КОТОРОГО ЗАДАЙТЕ INT ПЕРЕМЕННУЮ DATA С ЛЮБЫМ НАЧАЛЬНЫМ ЗНАЧЕНИЕМ.
+    ЕСЛИ DATA МЕНЬШЕ 10 ВКЛЮЧИТЕЛЬНО, ТО В КОНСОЛЬ ДОЛЖНО БЫТЬ ВЫВЕДЕНО СООБЩЕНИЕ “КРАСНЫЙ”, ЕСЛИ ОТ 10 ДО 20
+    ВКЛЮЧИТЕЛЬНО, ТО “ЖЕЛТЫЙ”, ЕСЛИ БОЛЬШЕ 20 - “ЗЕЛЕНЫЙ”*/
     public static void selectColor(int data) {
         if (data <= 10) {
             System.out.println("Красный");
@@ -88,9 +88,9 @@ public class Hw01 {
         }
     }
 
-    /* (4) Реализуйте метод compareNumbers(), в теле которого объявите две int переменные a и b с любыми начальными
-    значениями. Если a больше или равно b, то необходимо вывести в консоль   сообщение “a >= b”, в противном случае “a <
-     b”;*/
+    /* (4) РЕАЛИЗУЙТЕ МЕТОД COMPARENUMBERS(), В ТЕЛЕ КОТОРОГО ОБЪЯВИТЕ ДВЕ INT ПЕРЕМЕННЫЕ A И B С ЛЮБЫМИ НАЧАЛЬНЫМИ
+    ЗНАЧЕНИЯМИ. ЕСЛИ A БОЛЬШЕ ИЛИ РАВНО B, ТО НЕОБХОДИМО ВЫВЕСТИ В КОНСОЛЬ СООБЩЕНИЕ “A >= B”, В ПРОТИВНОМ СЛУЧАЕ “A
+    < B”*/
     public static void compareNumbers(int a, int b) {
         if (a >= b) {
             System.out.println(a + " >= " + b);
@@ -99,8 +99,8 @@ public class Hw01 {
         }
     }
 
-    /* (5) Создайте метод addOrSubtractAndPrint(int initValue, int delta, boolean increment). Если increment = true, то
-    метод должен к initValue прибавить delta и отпечатать в консоль     результат, в противном случае - вычесть*/
+    /* (5) СОЗДАЙТЕ МЕТОД ADDORSUBTRACTANDPRINT(INT INITVALUE, INT DELTA, BOOLEAN INCREMENT). ЕСЛИ INCREMENT = TRUE,
+    ТО МЕТОД ДОЛЖЕН К INITVALUE ПРИБАВИТЬ DELTA И ОТПЕЧАТАТЬ В КОНСОЛЬ РЕЗУЛЬТАТ, В ПРОТИВНОМ СЛУЧАЕ - ВЫЧЕСТЬ*/
     public static void addOrSubtractAndPrint(int initValue, int delta, boolean increment) {
         if (increment) {
             System.out.println(initValue + delta);
