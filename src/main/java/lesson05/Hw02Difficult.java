@@ -1,6 +1,7 @@
 package lesson05;
 
 import java.util.Arrays;
+import java.util.stream.IntStream;
 
 public class Hw02Difficult {
     public static void main(String[] args) {
@@ -11,7 +12,7 @@ public class Hw02Difficult {
         setOfArrays(array1, array2, array3);
 
         //Данные и запуск метода для решения задачи №2
-        int[] checkupArray = {1, 5, 1, 1, 1, 5};
+        int[] checkupArray = {1, 1, 1, 1, 1, 5};//{9, 4};//{5, 3, 4, -2};
         checkOrderArray(checkupArray);
 
         //Данные и запуск метода для решения задачи №3
@@ -46,24 +47,19 @@ public class Hw02Difficult {
     public static void checkOrderArray(int[] checkupArray) {
         int leftPoint = 0;
         int rightPoint = 0;
+        int rightSum = IntStream.of(checkupArray).sum();
+        System.out.println(rightSum);
+        int leftSum = 0;
         for (int i = 0; i < checkupArray.length - 1; i++) {
-            int leftSum = 0;
-            int rightSum = 0;
-
-            for (int j = 0; j < i+1; j++) {
-                leftSum += checkupArray[j];
-            }
-            for (int k = i+1; k < checkupArray.length; k++) {
-                rightSum += checkupArray[k];
-            }
-            //System.out.println("i="+i+ "// LeftSum=" + leftSum + " RightSum= " + rightSum); // проверка сумм
-            // элементов слева и справа
+            leftSum += checkupArray[i];
+            rightSum -= checkupArray[i];
             if (leftSum == rightSum) {
                 leftPoint = i + 1;
-                rightPoint = leftPoint +1;
+                rightPoint = leftPoint + 1;
+                System.out.println("Точка слева = " + leftPoint + ". Точка справа = " + rightPoint);
+                break;
             }
         }
-        //System.out.println("Точка слева = " + leftPoint + ". Точка справа = " + rightPoint); //отображение результатов
     }
 
     //  3. Реализуйте метод, проверяющий, что все элементы массива идут в порядке убывания или возрастания (по выбору
